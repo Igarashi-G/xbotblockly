@@ -40,6 +40,11 @@
   <script src="../blockly/generators/python/xbot.js"></script>
   <script src="../blockly/php_compressed.js"></script>
   <script src="../blockly/msg/js/en.js"></script>
+<!-->add<--> 	
+  <script src="../blockly/blocks/xbot_simulation.js"></script>
+  <script src="../blockly/generators/python/xbot_simulation.js"></script>
+  <script src="../blockly/blocks/xbot_sensor.js"></script>
+  <script src="../blockly/generators/python/xbot_sensor.js"></script>
 
   <!-- Ace editor -->
   <script src="../ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
@@ -453,6 +458,31 @@
       <block type="xbot_turn"></block>
       <block type="xbot_get_laser"></block>
     </category>
+<!-->add code<-->
+    <category id="xbot_simulation" name="Xbot-Simulation" colour="90">
+      <block type="xbot_start"></block>
+      
+      <block type="xbot_stop"></block>
+      <block type="xbot_end"></block>
+      <block type="xbot_move"></block>
+      <block type="xbot_turn"></block>
+
+      <block type="xbot_rplidar"></block>
+      <block type="xbot_move_time"></block>
+      <block type="xbot_turn_time"></block>
+      <block type="xbot_move_dist"></block>
+      <block type="xbot_turn_angle"></block>
+      <block type="xbot_circle"></block>
+    </category>
+
+    <category id="xbot_sensor" name="Xbot_Sensor" colour="90"> 
+      <block type="xbot_get_laser"></block>
+      <block type="xbot_get_imu"></block>
+      <block type="xbot_get_odom"></block> 
+      <block type="xbot_take_picture"></block>
+      <block type="xbot_take_depth_picture"></block>    
+    </category>
+    <!--><-->
 
     <category id="xbot" name="Xbot-Intermediate" colour="90">
       <block type="xbot_move_time"></block>
