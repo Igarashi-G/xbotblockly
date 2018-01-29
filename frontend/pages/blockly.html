@@ -40,7 +40,8 @@
   <script src="../blockly/generators/python/xbot.js"></script>
   <script src="../blockly/php_compressed.js"></script>
   <script src="../blockly/msg/js/en.js"></script>
-<!-->add<--> 	
+  
+  <!--Add Blockly--> 	
   <script src="../blockly/blocks/xbot_simulation.js"></script>
   <script src="../blockly/generators/python/xbot_simulation.js"></script>
   <script src="../blockly/blocks/xbot_sensor.js"></script>
@@ -48,6 +49,10 @@
 
   <!-- Ace editor -->
   <script src="../ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+
+  <!--Refresh iframe-->
+  <script>
+    ifrmid.navigate("all.html");</script>
 
   <!-- Ubuntu fonts -->
   <!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin"> -->
@@ -227,7 +232,7 @@
             <div class="col-sm-7" id="test" style="height:150vh;text-align:left;">
               <div class="row-sm-8">
                 <h1>Rviz Web</h1>
-                <iframe width="825px" height="625px" src="./rviz/all.html"></iframe>
+                <iframe width="825px" height="625px" src="./rviz/all.html" name="ifrmname" id="ifrmid"></iframe>
               </div>
               <div class="row-sm-4">
                 <h1>Topic</h1>
