@@ -50,10 +50,7 @@
   <!-- Ace editor -->
   <script src="../ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 
-  <!--Refresh iframe-->
-  <script>
-    ifrmid.navigate("all.html");</script>
-
+  
   <!-- Ubuntu fonts -->
   <!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin"> -->
   <link rel="stylesheet" type="text/css" href="assets/css/ubuntu.css">
@@ -232,7 +229,11 @@
             <div class="col-sm-7" id="test" style="height:150vh;text-align:left;">
               <div class="row-sm-8">
                 <h1>Rviz Web</h1>
-                <iframe width="825px" height="625px" src="./rviz/all.html" name="ifrmname" id="ifrmid"></iframe>
+                <iframe id="ifrmid" width="825px" height="625px" src="./rviz/all.html" ></iframe>
+                  <!--Refresh iframe-->
+		<script>document.getElementById("ifrmid").contentWindow.location.reload(true);</script>
+
+
               </div>
               <div class="row-sm-4">
                 <h1>Topic</h1>
