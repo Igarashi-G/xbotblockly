@@ -16,12 +16,9 @@ def turn():
     else:
         msg.angular.z = -turn_vel
 
-#    while not rospy.is_shutdown():
-#        rospy.info("Talker: move: x = %f"% msg.linear.x)
-    for i in range(3):
-        turn_pub.publish(msg)
+    turn_pub.publish(msg)
 
-        print(msg)
-        rate.sleep()
+    print(msg)
+    rate.sleep()
 
 turn()

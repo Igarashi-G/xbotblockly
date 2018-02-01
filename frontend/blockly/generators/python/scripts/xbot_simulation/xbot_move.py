@@ -15,13 +15,10 @@ def talker():
     else:
         msg.linear.x = -float(move_speed)/100
 
-#    while not rospy.is_shutdown():
-#        rospy.info("Talker: move: x = %f"% msg.linear.x)
-    for i in range(3):
-        move_pub.publish(msg)
+    move_pub.publish(msg)
 
-        print(msg)
-        rate.sleep()
+    print(msg)
+    rate.sleep()
 
 talker()
 
