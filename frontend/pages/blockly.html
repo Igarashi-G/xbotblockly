@@ -40,10 +40,17 @@
   <script src="../blockly/generators/python/xbot.js"></script>
   <script src="../blockly/php_compressed.js"></script>
   <script src="../blockly/msg/js/en.js"></script>
+  
+  <!--Add Blockly--> 	
+  <script src="../blockly/blocks/xbot_simulation.js"></script>
+  <script src="../blockly/generators/python/xbot_simulation.js"></script>
+  <script src="../blockly/blocks/xbot_sensor.js"></script>
+  <script src="../blockly/generators/python/xbot_sensor.js"></script>
 
   <!-- Ace editor -->
   <script src="../ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 
+  
   <!-- Ubuntu fonts -->
   <!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin"> -->
   <link rel="stylesheet" type="text/css" href="assets/css/ubuntu.css">
@@ -222,7 +229,11 @@
             <div class="col-sm-7" id="test" style="height:150vh;text-align:left;">
               <div class="row-sm-8">
                 <h1>Rviz Web</h1>
-                <iframe width="825px" height="625px" src="./rviz/all.html"></iframe>
+                <iframe id="ifrmid" width="825px" height="625px" src="./rviz/all.html" ></iframe>
+                  <!--Refresh iframe-->
+		<script>document.getElementById("ifrmid").contentWindow.location.reload(true);</script>
+
+
               </div>
               <div class="row-sm-4">
                 <h1>Topic</h1>
@@ -453,6 +464,31 @@
       <block type="xbot_turn"></block>
       <block type="xbot_get_laser"></block>
     </category>
+<!-->add code<-->
+    <category id="xbot_simulation" name="Xbot-Simulation" colour="90">
+      <block type="xbot_start"></block>
+      
+      <block type="xbot_stop"></block>
+      <block type="xbot_end"></block>
+      <block type="xbot_move"></block>
+      <block type="xbot_turn"></block>
+
+      <block type="xbot_rplidar"></block>
+      <block type="xbot_move_time"></block>
+      <block type="xbot_turn_time"></block>
+      <block type="xbot_move_dist"></block>
+      <block type="xbot_turn_angle"></block>
+      <block type="xbot_circle"></block>
+    </category>
+
+    <category id="xbot_sensor" name="Xbot_Sensor" colour="90"> 
+      <block type="xbot_get_laser"></block>
+      <block type="xbot_get_imu"></block>
+      <block type="xbot_get_odom"></block> 
+      <block type="xbot_take_picture"></block>
+      <block type="xbot_take_depth_picture"></block>    
+    </category>
+    <!--><-->
 
     <category id="xbot" name="Xbot-Intermediate" colour="90">
       <block type="xbot_move_time"></block>
