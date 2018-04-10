@@ -17,16 +17,16 @@ else:
     
     #from quaternion to euler(rpy)
     quat = (odom_data.pose.pose.orientation.x,odom_data.pose.pose.orientation.y,
-            odom_data.pose.pose.orientation.z,odom_data.pose.pose.orientation.w)
-    euler = euler_from_quaternion(quat)   
-    yaw =euler[2]
+            odom_data.pose.pose.orientation.z,odom_data.pose.pose.orientation.w)#四元组
+    euler = euler_from_quaternion(quat)  #欧拉（传入四元组）
+    yaw =euler[2] #偏航
     
     #centimeters = -50
-    dist = float(centimeters)/100
+    dist = float(centimeters)/100 #
     
     #create goal
-    goal = PoseStamped()
-    goal.header = odom_data.header
+    goal = PoseStamped()#初始化标记
+    goal.header = odom_data.header #
     #cal goal_x, goal_y
     goal.pose.position.x = odom_data.pose.pose.position.x + dist*math.cos(yaw)
     goal.pose.position.y = odom_data.pose.pose.position.y + dist*math.sin(yaw)
@@ -34,7 +34,7 @@ else:
     goal.pose.orientation = odom_data.pose.pose.orientation
 
     #publish goal
-    pub = rospy.Publisher('/move_base_simple/goal', PoseStamped, queue_size=1)
+    pub = rospy.Publisher('/move_base_simple/goal', PoseStamped, queue_size=1) #发送目标点
     #begin to publish after subscriber connection established, or the subscriber might get lost
     r = rospy.Rate(10)
     while pub.get_num_connections() == 0: #if there's more than 1 connections, pub goal would fail
