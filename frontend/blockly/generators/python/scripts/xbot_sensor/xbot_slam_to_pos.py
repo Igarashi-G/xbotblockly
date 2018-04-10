@@ -7,14 +7,12 @@ from geometry_msgs.msg import PointStamped, PoseStamped, Quaternion
 
 #check if slam get started
 ros_nodes = rosnode.get_node_names()
-print("start slam!!!")
-print(ros_nodes)
-if ('/slam_gmapping' not in ros_nodes) or ('/move_base' not in ros_nodes):
+if ('/gmapping' not in ros_nodes) or ('/move_base' not in ros_nodes):
     print('SLAM not started')
 
 else:
     print('Move in SLAM mode')
-    #rospy.init_node('xbot_go_pos_slam')
+    rospy.init_node('xbot_go_pos_slam')
     odom_data = rospy.wait_for_message('/odom',Odometry,timeout=5)
     
     # TODO: implemented in generators/python/xbot.js blockly

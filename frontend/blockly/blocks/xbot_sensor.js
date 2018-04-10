@@ -96,3 +96,17 @@ Blockly.Blocks['xbot_take_depth_picture'] = {
     this.setHelpUrl('www.iscas.ac.cn');
   }
 };
+
+
+Blockly.Blocks['get_get'] = {
+ init: function() {
+    this.appendValueInput("odom")
+        .appendField("odom");
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setColour(255);
+    this.setTooltip('');
+    this.setHelpUrl('www.iscas.ac.cn');
+  }
+};
+

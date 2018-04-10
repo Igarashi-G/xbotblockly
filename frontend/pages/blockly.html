@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link href="http://erlerobotics.com/blog/wp-content/uploads/2015/04/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <!--<link href="http://erlerobotics.com/blog/wp-content/uploads/2015/04/favicon.png" rel="shortcut icon" type="image/x-icon">-->
 
   <title>robot_blockly, program your ROS robots in a simple way</title>
 
@@ -34,7 +34,9 @@
   <!-- Include Blocky -->
   <script src="../blockly/blockly_compressed.js"></script>
   <script src="../blockly/blocks_compressed.js"></script>
-  <script src="../blockly/blocks/xbot.js"></script>
+<!--
+  
+  <script src="../blockly/blocks/xbot.js"></script>-->
   <script src="../blockly/javascript_compressed.js"></script>
   <script src="../blockly/python_compressed.js"></script>
   <script src="../blockly/generators/python/xbot.js"></script>
@@ -46,6 +48,9 @@
   <script src="../blockly/generators/python/xbot_simulation.js"></script>
   <script src="../blockly/blocks/xbot_sensor.js"></script>
   <script src="../blockly/generators/python/xbot_sensor.js"></script>
+  <script src="../blockly/blocks/xbot_slam.js"></script>
+  <script src="../blockly/generators/python/xbot_slam.js"></script>
+
 
   <!-- Ace editor -->
   <script src="../ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
@@ -426,7 +431,7 @@
     <category id="control" name="Control">
       <block type="wait"></block>
     </category>
-    <sep></sep>
+    <sep></sep><!--这里多余的显示部分
     <category id="spider" name="Erle-Spider" colour="260">
       <block type="spider_standup_down"></block>
       <block type="spider_walk"></block>
@@ -463,7 +468,7 @@
       <block type="xbot_move"></block>
       <block type="xbot_turn"></block>
       <block type="xbot_get_laser"></block>
-    </category>
+    </category>-->
 <!-->add code<-->
     <category id="xbot_simulation" name="Xbot-Simulation" colour="90">
       <block type="xbot_start"></block>
@@ -488,6 +493,32 @@
       <block type="xbot_take_picture"></block>
       <block type="xbot_take_depth_picture"></block>    
     </category>
+    
+<!-->add code<-->
+    <category id="xbot_simulation" name="Xbot-Simulation" colour="90">
+      <block type="xbot_start"></block>
+      
+      <block type="xbot_stop"></block>
+      <block type="xbot_end"></block>
+      <block type="xbot_move"></block>
+      <block type="xbot_turn"></block>
+
+      <block type="xbot_rplidar"></block>
+      <block type="xbot_move_time"></block>
+      <block type="xbot_turn_time"></block>
+      <block type="xbot_move_dist"></block>
+      <block type="xbot_turn_angle"></block>
+      <block type="xbot_circle"></block>
+    </category>
+
+    <category id="xbot_sensor" name="Xbot_Sensor" colour="90"> 
+      <block type="xbot_get_laser"></block>
+      <block type="xbot_get_imu"></block>
+      <block type="xbot_get_odom"></block> 
+      <block type="xbot_take_picture"></block>
+      <block type="xbot_take_depth_picture"></block>    
+    </category>
+    
     <!--><-->
 
     <category id="xbot" name="Xbot-Intermediate" colour="90">
