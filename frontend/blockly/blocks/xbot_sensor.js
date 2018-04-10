@@ -98,7 +98,6 @@ Blockly.Blocks['xbot_take_depth_picture'] = {
 };
 
 
-
 Blockly.Blocks['get_get'] = {
  init: function() {
     this.appendValueInput("odom")
@@ -110,3 +109,4 @@ Blockly.Blocks['get_get'] = {
     this.setHelpUrl('www.iscas.ac.cn');
   }
 };
+

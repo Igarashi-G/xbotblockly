@@ -17,8 +17,9 @@ commands = [
 	   # 'rosparam set use_gui true &&\
            #  rosparam set source_list "[\'new_joint_status\']" &&\
            #  rosrun joint_state_publisher joint_state_publisher',\
-	   # 'rosrun tf2_web_republisher tf2_web_republisher'
-	   # 'roslaunch rosbridge_server rosbridge_websocket.launch'
+	    'rosrun tf2_web_republisher tf2_web_republisher'   #仿真中打开
+	    'roslaunch rosbridge_server rosbridge_websocket.launch'#仿真中打开
+
 ]
 
 import time
